@@ -1,0 +1,10 @@
+allprojects {
+    // Only configure java toolchain where Java plugin is applied
+    plugins.withType(org.gradle.api.plugins.JavaPlugin) {
+        java {
+            toolchain {
+                languageVersion = JavaLanguageVersion.of(17)
+            }
+        }
+    }
+}
